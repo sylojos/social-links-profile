@@ -1,3 +1,86 @@
+/*
+ * Font Name: Inter
+ * Source: https://github.com/rsms/inter
+ * Author: Rasmus Andersson (https://github.com/rsms)
+ * Contributors: https://github.com/rsms/inter/graphs/contributors?all=1
+ * License: SIL Open Font License 1.1
+*/
+
+/* Static font fallback for older browsers */
+@font-face {
+  font-family: "Inter-static";
+  src: url("../assets/fonts/static/Inter-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter-static";
+  src: url("../assets/fonts/static/Inter-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter-static";
+  src: url("../assets/fonts/static/Inter-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+/* Variable font for modern browsers */
+@font-face {
+  font-family: "Inter-variable";
+  src: url("../assets/fonts/Inter-VariableFont_slnt\,wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+:root {
+  --c-green: oklch(91.127% 0.21624 123.808);
+  --c-white: oklch(100% 0.00011 271.152);
+  --c-grey-700: oklch(32.109% 0.00004 271.152);
+  --c-grey-800: oklch(23.929% 0.00003 271.152);
+  --c-grey-900: oklch(19.125% 0.00002 271.152);
+
+  --font-static: "Inter-static", sans-serif;
+  --font-variable: "Inter-variable", sans-serif;
+
+  --fs-12: calc(12 / 16 * 1rem);
+  --fs-14: calc(14 / 16 * 1rem);
+  --fs-16: calc(16 / 16 * 1rem);
+  --fs-18: calc(18 / 16 * 1rem);
+  --fs-20: calc(20 / 16 * 1rem);
+  --fs-22: calc(22 / 16 * 1rem);
+  --fs-24: calc(24 / 16 * 1rem);
+
+  --fw-regular: 400;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+
+  --c-text-primary: var(--c-white);
+  --c-text-secondary: var(--c-green);
+
+  --ff-primary: var(--font-static);
+
+  --fs-profile-name: var(--fs-24);
+  --fs-profile-location: var(--fs-14);
+  --fs-profile-bio: var(--fs-14);
+  --fs-profile-link: var(--fs-14);
+
+  --fw-profile-name: var(--fw-bold);
+  --fw-profile-location: var(--fw-bold);
+  --fw-profile-bio: var(--fw-regular);
+  --fw-profile-link: var(--fw-bold);
+}
+
+@supports (font-variation-settings: normal) {
+  :root {
+    --ff-primary: var(--font-variable);
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -10,6 +93,7 @@
 
 body {
   line-height: 1.5;
+  font-family: var(--ff-primary);
 }
 
 img {
@@ -38,4 +122,28 @@ h4,
 h5,
 h6 {
   text-wrap: balance;
+}
+
+.profile__name {
+  font-weight: var(--fw-profile-name);
+  font-size: var(--fs-profile-name);
+  color: var(--c-text-primary);
+}
+
+.profile__location {
+  font-weight: var(--fw-profile-location);
+  font-size: var(--fs-profile-location);
+  color: var(--c-text-secondary);
+}
+
+.profile__bio {
+  font-weight: var(--fw-profile-bio);
+  font-size: var(--fs-profile-bio);
+  color: var(--c-text-primary);
+}
+
+.profile__link {
+  font-weight: var(--fw-profile-link);
+  font-size: var(--fs-profile-link);
+  color: var(--c-text-primary);
 }
