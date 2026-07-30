@@ -61,6 +61,9 @@
 
   --c-text-primary: var(--c-white);
   --c-text-secondary: var(--c-green);
+  --c-body-bg: var(--c-grey-900);
+  --c-profile-bg: var(--c-grey-800);
+  --c-link-bg: var(--c-grey-700);
 
   --ff-primary: var(--font-static);
 
@@ -94,6 +97,7 @@
 body {
   line-height: 1.5;
   font-family: var(--ff-primary);
+  background-color: var(--c-body-bg);
 }
 
 img {
@@ -124,6 +128,10 @@ h6 {
   text-wrap: balance;
 }
 
+.profile {
+  background-color: var(--c-profile-bg);
+}
+
 .profile__name {
   font-weight: var(--fw-profile-name);
   font-size: var(--fs-profile-name);
@@ -146,4 +154,5 @@ h6 {
   font-weight: var(--fw-profile-link);
   font-size: var(--fs-profile-link);
   color: var(--c-text-primary);
+  background-color: var(--c-link-bg);
 }
