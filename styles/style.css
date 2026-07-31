@@ -231,3 +231,16 @@ main {
   background-color: var(--c-link-bg-hover);
   color: var(--c-link-text-hover);
 }
+
+@media (375px < width < 385px) {
+  .profile {
+    padding: 35px;
+  }
+}
+
+@media (width > 384px) {
+  .profile {
+    width: min(88%, 400px);
+    padding: 42px;
+  }
+}
