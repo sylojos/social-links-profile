@@ -111,8 +111,6 @@ body {
   background-color: var(--c-body-bg);
   min-height: 100dvh;
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 img {
@@ -144,6 +142,13 @@ h6 {
   text-wrap: balance;
 }
 
+main {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .profile {
   background-color: var(--c-profile-bg);
   padding: var(--spacing-24);
@@ -151,7 +156,7 @@ h6 {
   flex-direction: column;
   gap: var(--spacing-22);
   border-radius: var(--radius-14);
-  width: 335px;
+  width: min(88%, 330px);
 }
 
 .profile__intro {
