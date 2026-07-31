@@ -73,6 +73,8 @@
   --c-body-bg: var(--c-grey-900);
   --c-profile-bg: var(--c-grey-800);
   --c-link-bg: var(--c-grey-700);
+  --c-link-bg-hover: var(--c-green);
+  --c-link-text-hover: var(--c-grey-700);
 
   --ff-primary: var(--font-static);
 
@@ -209,4 +211,14 @@ h6 {
   flex-grow: 1;
   text-align: center;
   padding: var(--spacing-12) 0;
+}
+
+.profile__link--hover:hover {
+  background-color: var(--c-link-bg-hover);
+  color: var(--c-link-text-hover);
+}
+
+.profile__link--focus:focus {
+  background-color: var(--c-link-bg-hover);
+  color: var(--c-link-text-hover);
 }
