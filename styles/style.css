@@ -232,6 +232,12 @@ main {
   color: var(--c-link-text-hover);
 }
 
+@media (width < 346px) {
+  .profile {
+    padding: 12px;
+  }
+}
+
 @media (375px < width < 385px) {
   .profile {
     padding: 35px;
